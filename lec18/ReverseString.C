@@ -85,20 +85,20 @@
 
 // Count words in a String
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
+// int main() {
 
-    char str[] = "Learning C is fun";
-    int words = 1;
+//     char str[] = "Learning C is fun";
+//     int words = 1;
 
-    for(int i = 0; str[i] != '\0'; i++) {
+//     for(int i = 0; str[i] != '\0'; i++) {
 
-        if(str[i] == ' ')
-            words++;
-    }
+//         if(str[i] == ' ')
+//             words++;
+//     }
 
-    printf("Words = %d", words);
+//     printf("Words = %d", words);
 
-    return 0;
-}
+//     return 0;
+// }
