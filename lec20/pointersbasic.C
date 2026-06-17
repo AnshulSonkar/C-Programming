@@ -160,18 +160,45 @@
 
 
 //String Using Pointer
+// #include <stdio.h>
+
+// int main() {
+
+//     char str[] = "Hello";
+
+//     char *ptr = str;
+
+//     while(*ptr != '\0') {
+//         printf("%c", *ptr);
+//         ptr++;
+//     }
+
+//     return 0;
+// } 
+
+
+// Reverse Array Using Pointer
 #include <stdio.h>
 
 int main() {
 
-    char str[] = "Hello";
+    int arr[] = {1,2,3,4,5};
 
-    char *ptr = str;
+    int *start = arr;
+    int *end = arr + 4;
 
-    while(*ptr != '\0') {
-        printf("%c", *ptr);
-        ptr++;
+    while(start < end) {
+
+        int temp = *start;
+        *start = *end;
+        *end = temp;
+
+        start++;
+        end--;
     }
+
+    for(int i=0;i<5;i++)
+        printf("%d ", arr[i]);
 
     return 0;
 }
