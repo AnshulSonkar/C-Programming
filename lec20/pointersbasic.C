@@ -63,17 +63,37 @@
 
 
 // Array Using Pointer
+// #include <stdio.h>
+
+// int main() {
+
+//     int arr[] = {1,2,3,4,5};
+
+//     int *ptr = arr;
+
+//     for(int i=0;i<5;i++) {
+//         printf("%d ", *(ptr+i));
+//     }
+
+//     return 0;
+// }
+
+
+// Sum of Array using pointer
 #include <stdio.h>
 
 int main() {
 
-    int arr[] = {1,2,3,4,5};
-
+    int arr[] = {10,20,30,40,50};
     int *ptr = arr;
 
+    int sum = 0;
+
     for(int i=0;i<5;i++) {
-        printf("%d ", *(ptr+i));
+        sum += *(ptr+i);
     }
+
+    printf("Sum = %d", sum);
 
     return 0;
 }
