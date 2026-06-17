@@ -80,20 +80,43 @@
 
 
 // Sum of Array using pointer
+// #include <stdio.h>
+
+// int main() {
+
+//     int arr[] = {10,20,30,40,50};
+//     int *ptr = arr;
+
+//     int sum = 0;
+
+//     for(int i=0;i<5;i++) {
+//         sum += *(ptr+i);
+//     }
+
+//     printf("Sum = %d", sum);
+
+//     return 0;
+// } 
+
+
+// Swap two numbers using Pointer
 #include <stdio.h>
+
+void swap(int *a, int *b) {
+
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
 int main() {
 
-    int arr[] = {10,20,30,40,50};
-    int *ptr = arr;
+    int x = 10;
+    int y = 20;
 
-    int sum = 0;
+    swap(&x, &y);
 
-    for(int i=0;i<5;i++) {
-        sum += *(ptr+i);
-    }
-
-    printf("Sum = %d", sum);
+    printf("%d %d", x, y);
 
     return 0;
 }
