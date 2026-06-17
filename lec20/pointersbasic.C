@@ -217,15 +217,30 @@
 // }
 
 
-// 
+// Inderction operator
+// #include <stdio.h>
+
+// int main() {
+//   int x = 10;
+//   int *ptr = &x;
+
+
+//   printf("%d\n", *ptr);
+//   printf("Address of x = %p\n", (void *)&x);
+
+// }
+
+
 #include <stdio.h>
 
 int main() {
-  int x = 10;
-  int *ptr = &x;
+    int x = 10;
+    int *ptr = &x;
 
+    printf("Value of x = %d\n", x);
+    printf("Address of x = %p\n", (void *)&x);
+    printf("Value of ptr = %p\n", (void *)ptr);
+    printf("Value at ptr = %d\n", *ptr);
 
-  printf("%d\n", *ptr);
-  printf("Address of x = %p\n", (void *)&x);
-
+    return 0;
 }
