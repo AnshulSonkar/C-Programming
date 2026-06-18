@@ -92,23 +92,44 @@
 
 
 // Structure and Function
+// #include <stdio.h>
+
+// struct Student {
+//     int roll;
+// };
+
+// void display(struct Student s) {
+//     printf("Roll = %d", s.roll);
+// }
+
+// int main() {
+
+//     struct Student s1;
+
+//     s1.roll = 101;
+
+//     display(s1);
+
+//     return 0;
+// } 
+
+
+// Pointer to Structure 
 #include <stdio.h>
 
 struct Student {
     int roll;
 };
 
-void display(struct Student s) {
-    printf("Roll = %d", s.roll);
-}
-
 int main() {
 
     struct Student s1;
 
-    s1.roll = 101;
+    struct Student *ptr = &s1;
 
-    display(s1);
+    ptr->roll = 101;
+
+    printf("%d", ptr->roll);
 
     return 0;
 }
