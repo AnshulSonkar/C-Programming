@@ -184,32 +184,58 @@
 
 
 // Student record system 
+// #include <stdio.h>
+
+// struct Student {
+//     int roll;
+//     char name[30];
+//     float cgpa;
+// };
+
+// int main() {
+
+//     struct Student s;
+
+//     printf("Enter Roll: ");
+//     scanf("%d", &s.roll);
+
+//     printf("Enter Name: ");
+//     scanf("%s", s.name);
+
+//     printf("Enter CGPA: ");
+//     scanf("%f", &s.cgpa);
+
+//     printf("\nStudent Details\n");
+
+//     printf("Roll : %d\n", s.roll);
+//     printf("Name : %s\n", s.name);
+//     printf("CGPA : %.2f\n", s.cgpa);
+
+//     return 0;
+// } 
+
+
+// 
 #include <stdio.h>
 
-struct Student {
-    int roll;
+struct Employee {
+    int id;
     char name[30];
-    float cgpa;
+    float salary;
 };
 
 int main() {
 
-    struct Student s;
+    struct Employee e;
 
-    printf("Enter Roll: ");
-    scanf("%d", &s.roll);
+    scanf("%d", &e.id);
+    scanf("%s", e.name);
+    scanf("%f", &e.salary);
 
-    printf("Enter Name: ");
-    scanf("%s", s.name);
-
-    printf("Enter CGPA: ");
-    scanf("%f", &s.cgpa);
-
-    printf("\nStudent Details\n");
-
-    printf("Roll : %d\n", s.roll);
-    printf("Name : %s\n", s.name);
-    printf("CGPA : %.2f\n", s.cgpa);
+    printf("%d %s %.2f",
+           e.id,
+           e.name,
+           e.salary);
 
     return 0;
 }
