@@ -115,21 +115,48 @@
 
 
 // Pointer to Structure 
+// #include <stdio.h>
+
+// struct Student {
+//     int roll;
+// };
+
+// int main() {
+
+//     struct Student s1;
+
+//     struct Student *ptr = &s1;
+
+//     ptr->roll = 101;
+
+//     printf("%d", ptr->roll);
+
+//     return 0;
+// } 
+
+
+// Nested Structure 
 #include <stdio.h>
+
+struct Address {
+    char city[20];
+};
 
 struct Student {
     int roll;
+    struct Address addr;
 };
 
 int main() {
 
     struct Student s1;
 
-    struct Student *ptr = &s1;
+    s1.roll = 101;
 
-    ptr->roll = 101;
+    printf("Enter City: ");
+    scanf("%s", s1.addr.city);
 
-    printf("%d", ptr->roll);
+    printf("%d %s", s1.roll, s1.addr.city);
 
     return 0;
 }
