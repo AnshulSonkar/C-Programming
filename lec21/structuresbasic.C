@@ -163,21 +163,53 @@
 
 
 // typedef with structure 
+// #include <stdio.h>
+
+// typedef struct Student {
+//     int roll;
+//     float cgpa;
+// } stu;
+
+// int main() {
+
+//     stu s1;
+
+//     s1.roll = 101;
+//     s1.cgpa = 9.1;
+
+//     printf("%d %.2f", s1.roll, s1.cgpa);
+
+//     return 0;
+// } 
+
+
+// Student record system 
 #include <stdio.h>
 
-typedef struct Student {
+struct Student {
     int roll;
+    char name[30];
     float cgpa;
-} stu;
+};
 
 int main() {
 
-    stu s1;
+    struct Student s;
 
-    s1.roll = 101;
-    s1.cgpa = 9.1;
+    printf("Enter Roll: ");
+    scanf("%d", &s.roll);
 
-    printf("%d %.2f", s1.roll, s1.cgpa);
+    printf("Enter Name: ");
+    scanf("%s", s.name);
+
+    printf("Enter CGPA: ");
+    scanf("%f", &s.cgpa);
+
+    printf("\nStudent Details\n");
+
+    printf("Roll : %d\n", s.roll);
+    printf("Name : %s\n", s.name);
+    printf("CGPA : %.2f\n", s.cgpa);
 
     return 0;
 }
