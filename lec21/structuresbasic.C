@@ -45,18 +45,47 @@
 
 
 // Structure Initialization 
+// #include <stdio.h>
+
+// struct Student {
+//     int roll;
+//     float cgpa;
+// };
+
+// int main() {
+
+//     struct Student s1 = {101, 8.9};
+
+//     printf("%d %.2f", s1.roll, s1.cgpa);
+
+//     return 0;
+// } 
+
+
+// Array of structures
 #include <stdio.h>
 
 struct Student {
     int roll;
-    float cgpa;
+    char name[20];
 };
 
 int main() {
 
-    struct Student s1 = {101, 8.9};
+    struct Student s[3];
 
-    printf("%d %.2f", s1.roll, s1.cgpa);
+    for(int i = 0; i < 3; i++) {
+
+        printf("Enter Roll and Name: ");
+        scanf("%d %s", &s[i].roll, s[i].name);
+    }
+
+    printf("\nStudent Details\n");
+
+    for(int i = 0; i < 3; i++) {
+
+        printf("%d %s\n", s[i].roll, s[i].name);
+    }
 
     return 0;
 }
