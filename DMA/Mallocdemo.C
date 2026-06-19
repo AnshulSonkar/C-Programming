@@ -140,29 +140,69 @@
 
 
 // Largest Element Using DMA
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+
+//     int n;
+//     scanf("%d", &n);
+
+//     int *arr = (int *)malloc(n * sizeof(int));
+
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//     }
+
+//     int max = arr[0];
+
+//     for(int i = 1; i < n; i++) {
+
+//         if(arr[i] > max)
+//             max = arr[i];
+//     }
+
+//     printf("Largest = %d", max);
+
+//     free(arr);
+
+//     return 0;
+// } 
+
+
+// Dynamic 2D Array 
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
 
-    int n;
-    scanf("%d", &n);
+    int rows = 3;
+    int cols = 3;
 
-    int *arr = (int *)malloc(n * sizeof(int));
+    int **arr;
 
-    for(int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+    arr = (int **)malloc(rows * sizeof(int *));
+
+    for(int i = 0; i < rows; i++) {
+        arr[i] = (int *)malloc(cols * sizeof(int));
     }
 
-    int max = arr[0];
-
-    for(int i = 1; i < n; i++) {
-
-        if(arr[i] > max)
-            max = arr[i];
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < cols; j++) {
+            arr[i][j] = i + j;
+        }
     }
 
-    printf("Largest = %d", max);
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < cols; j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+
+    for(int i = 0; i < rows; i++) {
+        free(arr[i]);
+    }
 
     free(arr);
 
