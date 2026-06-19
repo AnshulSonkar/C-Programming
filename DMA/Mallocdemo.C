@@ -171,40 +171,64 @@
 
 
 // Dynamic 2D Array 
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+
+//     int rows = 3;
+//     int cols = 3;
+
+//     int **arr;
+
+//     arr = (int **)malloc(rows * sizeof(int *));
+
+//     for(int i = 0; i < rows; i++) {
+//         arr[i] = (int *)malloc(cols * sizeof(int));
+//     }
+
+//     for(int i = 0; i < rows; i++) {
+//         for(int j = 0; j < cols; j++) {
+//             arr[i][j] = i + j;
+//         }
+//     }
+
+//     for(int i = 0; i < rows; i++) {
+//         for(int j = 0; j < cols; j++) {
+//             printf("%d ", arr[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     for(int i = 0; i < rows; i++) {
+//         free(arr[i]);
+//     }
+
+//     free(arr);
+
+//     return 0;
+// } 
+
+
+// DMA with Sructure 
 #include <stdio.h>
 #include <stdlib.h>
 
+struct Student {
+    int roll;
+};
+
 int main() {
 
-    int rows = 3;
-    int cols = 3;
+    struct Student *ptr;
 
-    int **arr;
+    ptr = (struct Student *)malloc(sizeof(struct Student));
 
-    arr = (int **)malloc(rows * sizeof(int *));
+    ptr->roll = 101;
 
-    for(int i = 0; i < rows; i++) {
-        arr[i] = (int *)malloc(cols * sizeof(int));
-    }
+    printf("%d", ptr->roll);
 
-    for(int i = 0; i < rows; i++) {
-        for(int j = 0; j < cols; j++) {
-            arr[i][j] = i + j;
-        }
-    }
-
-    for(int i = 0; i < rows; i++) {
-        for(int j = 0; j < cols; j++) {
-            printf("%d ", arr[i][j]);
-        }
-        printf("\n");
-    }
-
-    for(int i = 0; i < rows; i++) {
-        free(arr[i]);
-    }
-
-    free(arr);
+    free(ptr);
 
     return 0;
 }
