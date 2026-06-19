@@ -114,6 +114,32 @@
 
 
 // Sum of Dynamic Array
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+
+//     int n;
+//     scanf("%d", &n);
+
+//     int *arr = (int *)malloc(n * sizeof(int));
+
+//     int sum = 0;
+
+//     for(int i = 0; i < n; i++) {
+//         scanf("%d", &arr[i]);
+//         sum += arr[i];
+//     }
+
+//     printf("Sum = %d", sum);
+
+//     free(arr);
+
+//     return 0;
+// } 
+
+
+// Largest Element Using DMA
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -124,14 +150,19 @@ int main() {
 
     int *arr = (int *)malloc(n * sizeof(int));
 
-    int sum = 0;
-
     for(int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
-        sum += arr[i];
     }
 
-    printf("Sum = %d", sum);
+    int max = arr[0];
+
+    for(int i = 1; i < n; i++) {
+
+        if(arr[i] > max)
+            max = arr[i];
+    }
+
+    printf("Largest = %d", max);
 
     free(arr);
 
