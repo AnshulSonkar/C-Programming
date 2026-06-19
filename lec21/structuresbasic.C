@@ -216,26 +216,26 @@
 
 
 // 
-#include <stdio.h>
+// #include <stdio.h>
 
-struct Employee {
-    int id;
-    char name[30];
-    float salary;
-};
+// struct Employee {
+//     int id;
+//     char name[30];
+//     float salary;
+// };
 
-int main() {
+// int main() {
 
-    struct Employee e;
+//     struct Employee e;
 
-    scanf("%d", &e.id);
-    scanf("%s", e.name);
-    scanf("%f", &e.salary);
+//     scanf("%d", &e.id);
+//     scanf("%s", e.name);
+//     scanf("%f", &e.salary);
 
-    printf("%d %s %.2f",
-           e.id,
-           e.name,
-           e.salary);
+//     printf("%d %s %.2f",
+//            e.id,
+//            e.name,
+//            e.salary);
 
-    return 0;
-}
+//     return 0;
+// }
