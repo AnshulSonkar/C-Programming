@@ -123,19 +123,38 @@
 
 
 // Power of Number 
+// #include <stdio.h>
+
+// int power(int a, int b) {
+
+//     if(b == 0)
+//         return 1;
+
+//     return a * power(a, b - 1);
+// }
+
+// int main() {
+
+//     printf("%d", power(2, 5));
+
+//     return 0;
+// } 
+
+
+// GCD Using Recursion
 #include <stdio.h>
 
-int power(int a, int b) {
+int gcd(int a, int b) {
 
     if(b == 0)
-        return 1;
+        return a;
 
-    return a * power(a, b - 1);
+    return gcd(b, a % b);
 }
 
 int main() {
 
-    printf("%d", power(2, 5));
+    printf("%d", gcd(24, 18));
 
     return 0;
 }
