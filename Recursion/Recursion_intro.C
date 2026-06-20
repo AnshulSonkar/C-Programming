@@ -1,18 +1,40 @@
+// RECURSION
+// #include <stdio.h>
+
+// void fun(int n) {
+
+//     if(n == 0)
+//         return;
+
+//     printf("%d ", n);
+
+//     fun(n - 1);
+// }
+
+// int main() {
+
+//     fun(5);
+
+//     return 0;
+// } 
+
+
+// 2nd Code
 #include <stdio.h>
 
-void fun(int n) {
+void print(int n) {
 
     if(n == 0)
         return;
 
-    printf("%d ", n);
+    print(n - 1);
 
-    fun(n - 1);
+    printf("%d ", n);
 }
 
 int main() {
 
-    fun(5);
+    print(5);
 
     return 0;
 }
