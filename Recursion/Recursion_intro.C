@@ -61,19 +61,38 @@
 
 
 // Fcatorial Using Recurion 
+// #include <stdio.h>
+
+// int factorial(int n) {
+
+//     if(n == 0 || n == 1)
+//         return 1;
+
+//     return n * factorial(n - 1);
+// }
+
+// int main() {
+
+//     printf("%d", factorial(5));
+
+//     return 0;
+// } 
+
+
+// Sum of First N numbers
 #include <stdio.h>
 
-int factorial(int n) {
+int sum(int n) {
 
-    if(n == 0 || n == 1)
-        return 1;
+    if(n == 0)
+        return 0;
 
-    return n * factorial(n - 1);
+    return n + sum(n - 1);
 }
 
 int main() {
 
-    printf("%d", factorial(5));
+    printf("%d", sum(5));
 
     return 0;
 }
