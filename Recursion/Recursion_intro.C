@@ -182,24 +182,52 @@
 
 
 // Reverse String Using Recursion
+// #include <stdio.h>
+// #include <string.h>
+
+// void reverse(char str[], int index) {
+
+//     if(index < 0)
+//         return;
+
+//     printf("%c", str[index]);
+
+//     reverse(str, index - 1);
+// }
+
+// int main() {
+
+//     char str[] = "HELLO";
+
+//     reverse(str, strlen(str) - 1);
+
+//     return 0;
+// } 
+
+
+// Palindrome Using Recursion 
 #include <stdio.h>
 #include <string.h>
 
-void reverse(char str[], int index) {
+int palindrome(char str[], int start, int end) {
 
-    if(index < 0)
-        return;
+    if(start >= end)
+        return 1;
 
-    printf("%c", str[index]);
+    if(str[start] != str[end])
+        return 0;
 
-    reverse(str, index - 1);
+    return palindrome(str, start + 1, end - 1);
 }
 
 int main() {
 
-    char str[] = "HELLO";
+    char str[] = "madam";
 
-    reverse(str, strlen(str) - 1);
+    if(palindrome(str, 0, strlen(str) - 1))
+        printf("Palindrome");
+    else
+        printf("Not Palindrome");
 
     return 0;
 }
