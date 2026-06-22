@@ -24,23 +24,48 @@
 
 
 // Read Student Record 
+// #include <stdio.h>
+
+// int main() {
+
+//     FILE *fp;
+
+//     int roll;
+//     char name[20];
+
+//     fp = fopen("student.txt", "r");
+
+//     fscanf(fp, "%d %s", &roll, name);
+
+//     printf("Roll = %d\n", roll);
+//     printf("Name = %s\n", name);
+
+//     fclose(fp);
+
+//     return 0;
+// } 
+
+
+// Copy one file to another 
 #include <stdio.h>
 
 int main() {
 
-    FILE *fp;
+    FILE *source;
+    FILE *target;
 
-    int roll;
-    char name[20];
+    char ch;
 
-    fp = fopen("student.txt", "r");
+    source = fopen("source.txt", "r");
+    target = fopen("target.txt", "w");
 
-    fscanf(fp, "%d %s", &roll, name);
+    while((ch = fgetc(source)) != EOF) {
 
-    printf("Roll = %d\n", roll);
-    printf("Name = %s\n", name);
+        fputc(ch, target);
+    }
 
-    fclose(fp);
+    fclose(source);
+    fclose(target);
 
     return 0;
 }
