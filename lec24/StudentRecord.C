@@ -47,25 +47,51 @@
 
 
 // Copy one file to another 
+// #include <stdio.h>
+
+// int main() {
+
+//     FILE *source;
+//     FILE *target;
+
+//     char ch;
+
+//     source = fopen("source.txt", "r");
+//     target = fopen("target.txt", "w");
+
+//     while((ch = fgetc(source)) != EOF) {
+
+//         fputc(ch, target);
+//     }
+
+//     fclose(source);
+//     fclose(target);
+
+//     return 0;
+// } 
+
+
+// Count Characters in file
 #include <stdio.h>
 
 int main() {
 
-    FILE *source;
-    FILE *target;
+    FILE *fp;
 
     char ch;
 
-    source = fopen("source.txt", "r");
-    target = fopen("target.txt", "w");
+    int count = 0;
 
-    while((ch = fgetc(source)) != EOF) {
+    fp = fopen("data.txt", "r");
 
-        fputc(ch, target);
+    while((ch = fgetc(fp)) != EOF) {
+
+        count++;
     }
 
-    fclose(source);
-    fclose(target);
+    printf("Characters = %d", count);
+
+    fclose(fp);
 
     return 0;
 }
