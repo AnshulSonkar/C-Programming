@@ -1,12 +1,25 @@
-#include <stdio.h>
+// #include <stdio.h>
 
-#define DEBUG
+// #define DEBUG
 
-int main() {
+// int main() {
 
-#ifdef DEBUG
-    printf("Debug Mode ON");
-#endif
+// #ifdef DEBUG
+//     printf("Debug Mode ON");
+// #endif
 
-    return 0;
-}
+//     return 0;
+// } 
+
+
+// #ifndef
+// #include <stdio.h>
+
+// int main() {
+
+// #ifndef TEST
+//     printf("TEST not defined");
+// #endif
+
+//     return 0;
+// }
