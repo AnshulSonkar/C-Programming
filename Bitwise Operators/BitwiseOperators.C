@@ -80,16 +80,34 @@
 
 
 // Chcek Even or Add 
+// #include <stdio.h>
+
+// int main() {
+
+//     int n = 12;
+
+//     if(n & 1)
+//         printf("Odd");
+//     else
+//         printf("Even");
+
+//     return 0;
+// } 
+
+
+// Swap without third variable
 #include <stdio.h>
 
 int main() {
 
-    int n = 12;
+    int a = 10;
+    int b = 20;
 
-    if(n & 1)
-        printf("Odd");
-    else
-        printf("Even");
+    a = a ^ b;
+    b = a ^ b;
+    a = a ^ b;
+
+    printf("%d %d", a, b);
 
     return 0;
 }
