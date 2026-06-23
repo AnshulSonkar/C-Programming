@@ -96,18 +96,34 @@
 
 
 // Swap without third variable
+// #include <stdio.h>
+
+// int main() {
+
+//     int a = 10;
+//     int b = 20;
+
+//     a = a ^ b;
+//     b = a ^ b;
+//     a = a ^ b;
+
+//     printf("%d %d", a, b);
+
+//     return 0;
+// } 
+
+
+// Check power of 2
 #include <stdio.h>
 
 int main() {
 
-    int a = 10;
-    int b = 20;
+    int n = 16;
 
-    a = a ^ b;
-    b = a ^ b;
-    a = a ^ b;
-
-    printf("%d %d", a, b);
+    if((n & (n - 1)) == 0)
+        printf("Power of 2");
+    else
+        printf("Not Power of 2");
 
     return 0;
 }
