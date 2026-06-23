@@ -54,13 +54,26 @@
 
 
 // Left shift <<
+// #include <stdio.h>
+
+// int main() {
+
+//     int a = 5;
+
+//     printf("%d", a << 1);
+
+//     return 0;
+// }
+
+
+// Right shift >>
 #include <stdio.h>
 
 int main() {
 
-    int a = 5;
+    int a = 20;
 
-    printf("%d", a << 1);
+    printf("%d", a >> 2);
 
     return 0;
 }
