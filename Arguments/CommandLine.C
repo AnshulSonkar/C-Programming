@@ -97,3 +97,21 @@
 
 //     return 0;
 // }  
+
+
+// Largest of two numbers 
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main(int argc, char *argv[])
+// {
+//     int a = atoi(argv[1]);
+//     int b = atoi(argv[2]);
+
+//     if(a > b)
+//         printf("%d", a);
+//     else
+//         printf("%d", b);
+
+//     return 0;
+// }
